@@ -4,11 +4,13 @@ import java.text.DateFormat;
 import java.util.Date;
 
 public class Event {
+	public static enum EventType{INFO, ERROR}; 
 	private static int counterId = 0;
 	private int id = counterId++;
 	private String message;
 	private Date date;
 	private DateFormat df;
+	private EventType type;
 
 	public Event(Date date, DateFormat df) {
 		super();
@@ -29,6 +31,14 @@ public class Event {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public EventType getType() {
+		return type;
+	}
+
+	public void setType(EventType type) {
+		this.type = type;
 	}
 	
 	

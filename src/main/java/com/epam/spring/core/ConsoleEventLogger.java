@@ -1,0 +1,7 @@
+package com.epam.spring.core;
+
+public class ConsoleEventLogger implements EventLogger {
+	public void logEvent(Event event) {
+		System.out.println("Logging message: " + event);
+	}
+}
